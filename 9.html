@@ -29,8 +29,8 @@
       }
       
       // Name validation
-      if (name.length < 10 || !/^[a-zA-Z ]+$/.test(name)) {
-        alert("Name must be at least 10 characters long and contain only alphabets");
+      if (name.length < 15 || !/^[a-zA-Z ]+$/.test(name)) {
+        alert("Name must be at least 15 characters long and contain only alphabets");
        return;
       }
       
@@ -56,16 +56,16 @@
 <body>
   <h1>Registration Page</h1>
   <form name="registrationForm" align="center">
-    <label for="userId">User ID:</label>
+    <label for="userId">User ID:</label><br>
     <input type="text" id="userId" name="userId"><br><br>
     
-    <label for="name">Name:</label>
+    <label for="name">Name:</label><br>
     <input type="text" id="name" name="name" ><br><br>
     
-    <label for="password">Password:</label>
+    <label for="password">Password:</label><br>
     <input type="text" id="password" name="password"><br><br>
     
-    <label for="email">Email:</label>
+    <label for="email">Email:</label><br>
     <input type="email" id="email" name="email"><br><br>
     
    <button onclick="validateForm()">Submit</button>
