@@ -6,6 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Student details</title>
+    <style>
+       body{
+    background-color:rgb(200, 149, 248);
+}
+form{
+    border:5px solid black;
+    padding:50px;
+    margin-left: auto;
+    margin-right:auto;
+    width:50%;
+    font-size:18px;
+    text-align:center;
+    background-color: rgb(243, 111, 221);
+}
+input[type="text"]{
+    margin-bottom:5px;
+}
+input[type="submit"]{
+    background-color: brown;
+}
+    </style>
       <script type="text/javascript">
         function evals(){
            var t1 = parseInt(document.forms["myform"]["t1"].value);
@@ -41,17 +62,17 @@
      </script>
   </head>
   <body>
-      <h1>Enter marks details: </h1>
+     <center> <h1>Enter marks details: </h1></center>
       <form name="myform" onsubmit="return evals()">
-          <label>Register Number : </label>
+          <label>Register Number : </label><br>
           <input type="text" name="regno" id ="regno" /><br/>
-          <label>Subject code : </label>
+          <label>Subject code : </label><br>
           <input type="text" name="sub" id ="sub" /><br/>
-          <label>Test-1: </label>
+          <label>Test-1: </label><br>
           <input type="number" id="t1" name="t1"/><br/>       
-          <label>Test-2: </label>
+          <label>Test-2: </label><br>
           <input type="number" id="t2" name="t2"/><br/>
-          <label>Test-3: </label>
+          <label>Test-3: </label><br>
           <input type="number" id="t3" name="t3"/><br/>
           <input type="submit" value="submit" />
       </form>
