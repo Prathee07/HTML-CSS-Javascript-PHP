@@ -7,17 +7,27 @@
                 text-align: center;
                 /* font-family: sans-serif; */
                 /* background-color: aquamarine; */
+             
             }
-            #main{
+            #header{
                 background-color: gray;
                 padding:20px;
                 color:white;
         
             }
-            #header{
+            #main{
                 padding:20px;
             }
             
+            #logo-1 {
+              height: 100px;
+            width: 23%;
+                   }
+                   
+              #logo {
+              height: 150px;
+             width: 200px;
+                     }
             #footer{
              background-color:gray;
              padding:10px;
@@ -42,14 +52,23 @@
         
     </head>
     <body>
-        <div id="main">
+        <header>
+        <div id="header">
+            <img src="./logo-1.jpg" alt="JSSSTU Logo" id="logo-1" />
             <h1>JSS SCIENCE AND TECHNOLOGY</h1>
         </div>
-        <div id ="header">
+        <img src="logo.jpg" alt="SJCE Logo" id="logo" />
+
+    </header>
+    <main>
+        <section>
+        <div id ="main">
             <h2>Computer Science and Engineering</h2>
             <h3>TIME TABLE FOR EVEN SEMESTER</h3>
 <h3><pre>SEMESTER:6                                                                                                                                  SECTION:E</pre></h3>
         </div>
+    </section>
+   <section>
         <table>
             <tr>
                 <th>DAY</th>
@@ -130,8 +149,10 @@
                         <td colspan="3"></td>     
                     </tr>
         </table>
+    </section>
         <br>
         <br>
+        <section>
         <table>
             <tr>
                 <th>Sub Code</th>
@@ -200,6 +221,7 @@
                 <td></td>
             </tr>
         </table>
+    </main>
         <br>
         <div id="footer">
            JSS SCIENCE AND TECHNOLOGY<br>
