@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>PHP write</title>
+  </head>
+  <body>
+    <form method="POST">
+      <label for="uname">Username:</label>
+      <input type="text" id="uname" name="uname"><br><br>
+
+      <label for="pword">Password:</label>
+      <input type="text" id="pword" name="pword"><br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+    <p>
+      <?php
+      if ($_SERVER["REQUEST_METHOD"]=="POST"){
+        $uname=$_POST["uname"];
+        $pword=$_POST["pword"];
+        $user_data=fopen("info.txt","r");
+        $contents=fread($user_data,filesize("info.txt"));
+        fclose($user_data);
+        if (strpos($contents,$uname.":".$pword) !== false){
+          echo "access gained";
+        }
+        else{
+          echo "no access";
+        }
+      }
+      ?>
+    </p>
+  </body>
+</html>
