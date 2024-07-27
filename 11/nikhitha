@@ -1,0 +1,29 @@
+<html>
+        <head>
+                <title>PHP file</title>
+        </head>
+        <body>
+         <form method="POST">
+                <label for="thoughts">Thoughts</label><br>
+                <textarea type="text" name="thoughts" id="thoughts" rows="15" cols="15" ></textarea><br><br>
+
+                <button type="submit" >submit</button><br><br>
+                <button type="reset" >reset</button><br><br>
+                
+         </form>
+         <p>
+         <?php
+         if ($_SERVER["REQUEST_METHOD"]=="POST"){
+                $thoughts=$_POST["thoughts"];
+                $thoughts_file=fopen("thoughts.txt","w");
+                fwrite($thoughts_file,$thoughts);
+                fclose($thoughts_file);
+                echo "<p>thoughts are</p>";
+                echo "<p>$thoughts</p>";
+                $file_path=realpath("thoughts.txt");
+                echo "file path is $file_path";
+         }
+         ?>
+         </p>
+        </body>
+</html>
