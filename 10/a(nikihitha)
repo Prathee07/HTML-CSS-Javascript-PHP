@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>date display</title>
+    </head>
+    <body>
+        <p> Today's date is: </p>
+        <date>
+            <?php
+            $today=date("d-m-Y");
+            echo $today;
+            ?>
+        </date>
+    </body>
+</html>
